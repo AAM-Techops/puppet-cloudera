@@ -88,7 +88,7 @@ class cloudera::cm (
 
       if $service_ensure in [ running, stopped ] {
         $service_ensure_real = $service_ensure
-        $service_enable = true
+        # $service_enable = true
       } else {
         fail('service_ensure parameter must be running or stopped')
       }
@@ -97,7 +97,7 @@ class cloudera::cm (
     /(absent)/: {
       $package_ensure = 'absent'
       $service_ensure_real = 'stopped'
-      $service_enable = false
+      # $service_enable = false
       $file_ensure = 'absent'
     }
     default: {
