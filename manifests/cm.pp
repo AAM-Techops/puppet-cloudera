@@ -67,6 +67,7 @@ class cloudera::cm (
   $ensure           = $cloudera::params::ensure,
   $autoupgrade      = $cloudera::params::safe_autoupgrade,
   $service_ensure   = $cloudera::params::service_ensure,
+  $service_enable   = $cloudera::params::safe_service_enable,
   $server_host      = $cloudera::params::cm_server_host,
   $server_port      = $cloudera::params::cm_server_port,
   $use_tls          = $cloudera::params::safe_cm_use_tls,
